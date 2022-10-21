@@ -87,10 +87,11 @@
             display: grid;
             place-items: center;
             border-radius: 5rem;
+            border: none;
+            outline: none;
             background: hsla(0, 0%, 55%, 0.62);
             width: 5vw;
             height: 5vw;
-            border: none;
             cursor: pointer;
         }
 
@@ -181,18 +182,11 @@
         your-style-section {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             width: 100%;
+            margin: .5rem 0;
         }
         
-        your-style-section #your-style-title {
-            /* margin: 1.2vw 0; */
-            padding: 54px;
-        }
-        
-        your-style-section #your-style-title h2 {
-            color: #888;
-        }
-
         your-style-section > card {
             width: 100%;
             position: relative;
@@ -202,8 +196,13 @@
         
         your-style-section > card img {
             width: 100%;
-            margin: 1.2vw 0;
+            margin: 0 0 1.6vw 0;
             opacity: .5;
+        }
+        
+        your-style-section #your-style-title img {
+            opacity: 0;
+            margin: 0;
         }
 
         your-style-section > card h2 {
@@ -214,12 +213,17 @@
             font-weight: 300;
             cursor: pointer;
         }
+        
+        your-style-section #your-style-title h2 {
+            color: #888;
+        }
 
         footer {
             display: flex;
             align-items: center;
             justify-content: space-between;
             width: 100;
+            margin: 5rem 0 0 0;
             background: #333;
             padding: 40px 5vw;
         }
@@ -296,6 +300,7 @@
 
         <your-style-section>
             <card id="your-style-title">
+                <img src="assets/imgs/industrial.png" alt="">
                 <h2>Your Style</h2>
             </card>
             <card>

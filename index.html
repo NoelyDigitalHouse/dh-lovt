@@ -8,273 +8,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/main.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Ropa+Sans:ital@0;1&display=swap');
-        
-        /* [ properties ]
-        ================================= */
-        :root {
-            --appbar-height: 60px;
-        }
-        /* [ defaults ]
-        ================================= */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Ropa Sans', sans-serif;
-        }
-
-        body {
-
-        }
-
-        appbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            height: var(--appbar-height);
-            padding: 0 48px;
-            background: #fff;
-            box-shadow: #00000040 0 2px 10px;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        appbar logo {
-            display: flex;
-            align-items: center;
-            gap: .5ch;
-        }
-
-        appbar logo h1 {
-            font-weight: 400;
-            color: #777;
-        } appbar logo h1:hover {
-            cursor: pointer;
-        }
-
-        appbar logo txt {
-            color: #aaa;
-            font-size: 10px;
-
-        }
-
-        appbar #menu-btn {
-            cursor: pointer;
-        }
-
-        home {
-            display: block;
-            width:  90%;
-            margin: 0 auto;
-        }
-
-        body home > header {
-            width: 100%;
-            margin: calc( var(--appbar-height) + 24px ) 0 6vw 0;
-            background: #4055;
-            position: relative;
-        }
-        body home > header #banner {
-            width: 100%;
-        }
-        
-        body home > header button {
-            display: grid;
-            place-items: center;
-            border-radius: 5rem;
-            border: none;
-            outline: none;
-            background: hsla(0, 0%, 55%, 0.62);
-            width: 5vw;
-            height: 5vw;
-            cursor: pointer;
-        }
-
-        body home > header button img {
-            width: 20%;
-        }
-
-        #slider-btn-left {
-            position: absolute;
-            top: 45%;
-            left: 2%;
-        } #slider-btn-left:hover {
-            transform: scale(1.1);
-        } #slider-btn-left:active {
-            transform: scale(1.1) translateX(-3px);
-        }
-
-        #slider-btn-right {
-            position: absolute;
-            top: 45%;
-            right: 2%;
-        } #slider-btn-right:hover {
-           transform: scale(1.1);
-        } #slider-btn-right:active {
-           transform: scale(1.1) translateX(3px);
-        }
-
-        top-section {
-            display: flex;
-            align-items: stretch;
-            justify-content: space-between;
-        }
-
-        top-section card {
-            display: block;
-            width: 42%;
-            background: #eee;
-        }
-
-        top-section card img {
-            width: 100%;
-        }
-
-        top-section card bottom {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 8px;
-            padding: 8px;
-        }
-
-        top-section card bottom header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        top-section card bottom header h2 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: #888;
-        }
-
-        top-section card bottom input {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-radius: 2rem;
-            border: none;
-            color: #fff;
-            padding: 2px 1ch;
-            font-size: 20px;
-        }
-        #oferta1 bottom header input {
-            background: #51d275;
-        }
-        #oferta2 bottom header input {
-            background: #dc9730;
-        }
-
-        top-section card bottom p {
-            font-size: 10px;
-            font-weight: 400;
-            text-align: justify;
-            color: #555;
-        }
-
-        your-style-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
-            margin: .5rem 0;
-        }
-        
-        your-style-section > card {
-            width: 100%;
-            position: relative;
-            display: grid;
-            place-items: center;
-        }
-        
-        your-style-section > card img {
-            width: 100%;
-            margin: 0 0 1.6vw 0;
-            opacity: .5;
-        }
-        
-        your-style-section #your-style-title img {
-            opacity: 0;
-            margin: 0;
-        }
-
-        your-style-section > card h2 {
-            position: absolute;
-            color: #fff;
-            text-shadow: #0003 0 0 8px;
-            font-size: 2rem;
-            font-weight: 300;
-            cursor: pointer;
-        }
-        
-        your-style-section #your-style-title h2 {
-            color: #888;
-        }
-
-        footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100;
-            margin: 5rem 0 0 0;
-            background: #333;
-            padding: 40px 5vw;
-        }
-
-        footer-left {
-            display: block;
-            width: 40vw;
-        }
-
-        footer-left img {
-            width: 100%;
-        }
-
-        footer-right {
-            display: flex;
-            flex-direction: column;
-            width: 40vw;
-
-        }
-    </style>
+    <link rel="stylesheet" href="assets/style/style.css">
 </head>
 <body>
     <appbar>
-        <logo>
-            <h1>LOVT</h1>
-            <txt>You Love, <br> 
-                your loft!
-            </txt>
-        </logo>
-        <img id="menu-btn" src="assets/imgs/menu.png" alt="">
+        <appbar-home>
+            <logo>
+                <h1>LOVT</h1>
+                <txt>You Love, <br> 
+                    your loft!
+                </txt>
+            </logo>
+            <img id="menu-btn" src="assets/imgs/menu.svg" alt="botão de menu">
+        </appbar-home>
     </appbar>
 
     <home>
-        <header>
-            <img id="banner" src="assets/imgs/banner.png" alt="">
+        <banner>
+            <img src="assets/imgs/banner.svg" alt="banner">
             <button id="slider-btn-left">
-                <img src="assets/imgs/esquerda.png" alt="">
+                <img src="assets/imgs/esquerda.svg" alt="slider esquerdo">
             </button>
             <button id="slider-btn-right">
-                <img src="assets/imgs/direita.png" alt="">
+                <img src="assets/imgs/direita.svg" alt="slider direito">
             </button>
-        </header>
+        </banner>
 
         <top-section>
             <card id="oferta1">
-                <img src="assets/imgs/oferta1.png" alt="">
+                <img src="assets/imgs/oferta1.svg" alt="Oferta 1">
                 <bottom>
-                    <header>
+                    <card-desc>
                         <h2>$ 1,200</h2>
                         <input type="button" value="New">
-                    </header>
+                    </card-desc>
                     <p>Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, 
                         bibendum egestas augue arcu ut est. Suco de cevadiss, 
                         é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. 
@@ -284,12 +51,12 @@
             </card>
 
             <card id="oferta2">
-                <img src="assets/imgs/oferta2.png" alt="">
+                <img src="assets/imgs/oferta2.svg" alt="Oferta 2">
                 <bottom>
-                    <header>
+                    <card-desc>
                         <h2>$ 2,000</h2>
                         <input type="button" value="Sale">
-                    </header>
+                    </card-desc>
                     <p>Mussum Ipsum, cacilds vidis litro abertis. Em pé sem cair, 
                         deitado sem dormir, sentado sem cochilar e fazendo pose. 
                         Nullam volutpat risus nec leo commodo, ut interdum diam laoreet.
@@ -300,31 +67,49 @@
 
         <your-style-section>
             <card id="your-style-title">
-                <img src="assets/imgs/industrial.png" alt="">
                 <h2>Your Style</h2>
             </card>
             <card>
-                <img src="assets/imgs/industrial.png" alt="">
                 <h2>Industrial</h2>
             </card>
             <card>
-                <img src="assets/imgs/modern.png" alt="">
                 <h2>Modern</h2>
-
             </card>
             <card>
-                <img src="assets/imgs/classico.png" alt="">
                 <h2>Classic</h2>
-
             </card>
         </your-style-section>
     </home>
 
     <footer>
         <footer-left>
-            <img src="assets/imgs/mapa.png" alt="">
+            <img src="assets/imgs/mapa.svg" alt="mapa de localização">
         </footer-left>
-        <footer-right></footer-right>
+        <footer-right>
+            <p>
+                LOVT - You love, your loft!
+                <br>
+                Broad St, Newark, NJ 07102 - USA
+                <br>
+                +1 (973) 854-555-548
+                <br>
+                contact@lovtrealstate.com
+            </p>
+            <social-contacts>
+                <p>OUR SOCIAL MEDIAS:</p>
+                <contact-links>
+                    <a href="http://instagram.com">
+                        <img src="assets/imgs/instagram.svg" alt="icone do instagram">
+                    </a>
+                    <a href="https://facebook.com">
+                        <img src="assets/imgs/facebook.svg" alt="icone do facebook">
+                    </a>
+                    <a href="https://wa.me/55999999999">
+                        <img src="assets/imgs/whatsapp.svg" alt="icone do whatsapp">
+                    </a>
+                </contact-links>
+            </social-contacts>
+        </footer-right>
     </footer>
 
     <script src="scripts/main.js"></script>

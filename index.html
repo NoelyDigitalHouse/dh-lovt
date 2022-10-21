@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Ropa+Sans:ital@0;1&display=swap');
+        
         /* [ properties ]
         ================================= */
         :root {
@@ -70,7 +71,6 @@
             display: block;
             width:  90%;
             margin: 0 auto;
-            /* background: lightcoral; */
         }
 
         body home > header {
@@ -122,39 +122,39 @@
             display: flex;
             align-items: stretch;
             justify-content: space-between;
-            background: #8943;
         }
 
-        card {
+        top-section card {
             display: block;
-            width: 40%;
+            width: 42%;
+            background: #eee;
         }
 
         top-section card img {
             width: 100%;
         }
 
-        top-section card section {
+        top-section card bottom {
             display: flex;
             flex-direction: column;
             justify-content: center;
             gap: 8px;
             padding: 8px;
-            background: #eee;
         }
-        top-section card section header {
+
+        top-section card bottom header {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
         
-        top-section card section header h2 {
+        top-section card bottom header h2 {
             font-size: 1.5rem;
             font-weight: 400;
             color: #888;
         }
 
-        top-section card section button {
+        top-section card bottom input {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -164,18 +164,80 @@
             padding: 2px 1ch;
             font-size: 20px;
         }
-        #oferta1 section header button {
+        #oferta1 bottom header input {
             background: #51d275;
         }
-        #oferta2 section header button {
+        #oferta2 bottom header input {
             background: #dc9730;
         }
 
-        top-section card section p {
+        top-section card bottom p {
             font-size: 10px;
             font-weight: 400;
             text-align: justify;
             color: #555;
+        }
+
+        your-style-section {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        your-style-section #your-style-title {
+            /* margin: 1.2vw 0; */
+            padding: 54px;
+        }
+        
+        your-style-section #your-style-title h2 {
+            color: #888;
+        }
+
+        your-style-section > card {
+            width: 100%;
+            position: relative;
+            display: grid;
+            place-items: center;
+        }
+        
+        your-style-section > card img {
+            width: 100%;
+            margin: 1.2vw 0;
+            opacity: .5;
+        }
+
+        your-style-section > card h2 {
+            position: absolute;
+            color: #fff;
+            text-shadow: #0003 0 0 8px;
+            font-size: 2rem;
+            font-weight: 300;
+            cursor: pointer;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100;
+            background: #333;
+            padding: 40px 5vw;
+        }
+
+        footer-left {
+            display: block;
+            width: 40vw;
+        }
+
+        footer-left img {
+            width: 100%;
+        }
+
+        footer-right {
+            display: flex;
+            flex-direction: column;
+            width: 40vw;
+
         }
     </style>
 </head>
@@ -184,7 +246,8 @@
         <logo>
             <h1>LOVT</h1>
             <txt>You Love, <br> 
-                your loft!</txt>
+                your loft!
+            </txt>
         </logo>
         <img id="menu-btn" src="assets/imgs/menu.png" alt="">
     </appbar>
@@ -201,47 +264,63 @@
         </header>
 
         <top-section>
-
             <card id="oferta1">
                 <img src="assets/imgs/oferta1.png" alt="">
-                <section>
+                <bottom>
                     <header>
                         <h2>$ 1,200</h2>
-                        <button>New</button>
+                        <input type="button" value="New">
                     </header>
                     <p>Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, 
                         bibendum egestas augue arcu ut est. Suco de cevadiss, 
                         é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. 
                         Casamentiss faiz malandris se pirulitá. Cevadis im ampola pa
                     </p>
-                </section>
+                </bottom>
             </card>
 
             <card id="oferta2">
                 <img src="assets/imgs/oferta2.png" alt="">
-                <section>
+                <bottom>
                     <header>
                         <h2>$ 2,000</h2>
-                        <button>Sale</button>
+                        <input type="button" value="Sale">
                     </header>
                     <p>Mussum Ipsum, cacilds vidis litro abertis. Em pé sem cair, 
                         deitado sem dormir, sentado sem cochilar e fazendo pose. 
                         Nullam volutpat risus nec leo commodo, ut interdum diam laoreet.
                     </p>
-                </section>
+                </bottom>
             </card>
-
         </top-section>
 
-        <bottom>
-            <h2>Your Style</h2>
-            <img src="assets/imgs/industrial.png" alt="">
-            <img src="assets/imgs/modern.png" alt="">
-            <img src="assets/imgs/classico.png" alt="">
-        </bottom>
+        <your-style-section>
+            <card id="your-style-title">
+                <h2>Your Style</h2>
+            </card>
+            <card>
+                <img src="assets/imgs/industrial.png" alt="">
+                <h2>Industrial</h2>
+            </card>
+            <card>
+                <img src="assets/imgs/modern.png" alt="">
+                <h2>Modern</h2>
+
+            </card>
+            <card>
+                <img src="assets/imgs/classico.png" alt="">
+                <h2>Classic</h2>
+
+            </card>
+        </your-style-section>
     </home>
 
-    <footer></footer>
+    <footer>
+        <footer-left>
+            <img src="assets/imgs/mapa.png" alt="">
+        </footer-left>
+        <footer-right></footer-right>
+    </footer>
 
     <script src="scripts/main.js"></script>
 </body>

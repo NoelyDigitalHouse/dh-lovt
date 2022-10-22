@@ -41,6 +41,7 @@ appbar logo {
     display: flex;
     align-items: center;
     gap: .5ch;
+    user-select: none;
 }
 
 appbar logo h1 {

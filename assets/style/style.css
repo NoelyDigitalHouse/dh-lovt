@@ -17,9 +17,9 @@
     font-family: 'Ropa Sans', sans-serif;
 }
 
-/* [ appbar ]
+/* [ header ]
 ================================= */
-appbar {
+header {
     display: block;
     width: 100%;
     height: var(--appbar-height);
@@ -28,7 +28,7 @@ appbar {
     position: absolute;
     top: 0;
     left: 0;
-} appbar-home {
+} body header content {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -37,26 +37,26 @@ appbar {
     margin: 0 auto;
 }
 
-appbar logo {
+header content logo {
     display: flex;
     align-items: center;
     gap: .5ch;
     user-select: none;
 }
 
-appbar logo h1 {
+header content logo h1 {
     font-weight: 400;
     color: #777;
-} appbar logo h1:hover {
+} header content logo h1:hover {
     cursor: pointer;
 }
 
-appbar logo txt {
+header content logo txt {
     color: #aaa;
     font-size: 10px;
 }
 
-appbar #menu-btn {
+header #menu-btn {
     cursor: pointer;
 }
 
